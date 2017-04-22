@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>spike</title>
+</head>
+<body>
+
+<h1>Hi there</h1>
+<div>
+	<label>High Reading: </label>
+	<span id="high_read">hmm</span>
+	</br>
+	<label>Low Reading: </label>
+	<span id="low_read">hmm</span>
+	</br>
+	<label>Response time: </label>
+	<span id="resp_time">hmm</span>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC1N4rQ9Qcnd2ajh4A20QXJ8Ipl8LssSP8",
+    authDomain: "spike2-7c8a9.firebaseapp.com",
+    databaseURL: "https://spike2-7c8a9.firebaseio.com",
+    projectId: "spike2-7c8a9",
+    storageBucket: "spike2-7c8a9.appspot.com",
+    messagingSenderId: "238790633764"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+        integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+        crossorigin="anonymous"></script>
+<script src="/conn.js"></script>
+
+</body>
+</html>
