@@ -12,15 +12,13 @@ var path = require('path')
 var server = app.listen(3001, function () { console.log('Listening on port 3001!') }) 
 var socket = require('socket.io')(server)
 
-var start;
-var end;
-
 app.use(express.static(path.join(__dirname, '../public')))
-
 app.get('/', function (req, res) {
     res.sendFile(path.resolve(__dirname + '/../public/index.html'))
 })
 
+var start;
+var end;
 
 board.on("ready", function() {
 
@@ -35,17 +33,15 @@ board.on("ready", function() {
   // "motionstart" events are fired when motion occurs within 
   // the observable range of the motion sensor
   motion.on("motionstart", function() {
-    console.log("motionstart");
     start = new Date();
-    console.log(start.toTimeString());
+    console.log("motionstart" + start.toTimeString());
     socket.emit("start", start.toTimeString(), start.getTime());
   });
 
   // "motionend" events are fired when motion has ceased
   motion.on("motionend", function() {
-    console.log("motionend");
     end = new Date();
-    console.log(end.toTimeString());
+    console.log("motionend" + end.toTimeString());
     socket.emit("end", end.toTimeString(), end.getTime());
   });
 });

@@ -2,7 +2,6 @@ $(function () {
     var socket = io();
     var responseTime;
 
-
     // receiving from server
     socket.on('start', function (pdata, data) {
         $('#start_time').html(pdata);
