@@ -9,10 +9,10 @@
   "author": "Melissa Pereira",
   "license": "ISC",
   "dependencies": {
-    "beaglebone-io": "^2.0.0",
+    "bonescript": "^0.6.1",
     "express": "^4.15.2",
     "johnny-five": "^0.10.9",
     "path": "^0.12.7",
-    "socket.io": "^1.7.3"
+    "firebase": "3.8.0"
   }
 }
