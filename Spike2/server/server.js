@@ -28,15 +28,13 @@ ref.once("value", function(snapshot) {
 });
 
 
-var start;
-var end;
-
 app.use(express.static(path.join(__dirname, '../public')))
-
 app.get('/', function (req, res) {
     res.sendFile(path.resolve(__dirname + '/../public/index.html'))
 })
 
+var start;
+var end;
 
 board.on("ready", function() {
 
